@@ -16,7 +16,7 @@ public class Main {
         // Make an if statement that triggers a print or println statement
         if(true)
         {
-            system.out.println("words");
+            System.out.println("words");
         }
         // Make an if, else statement where the else statement triggers a print or println statement
         if(!true)
@@ -34,7 +34,7 @@ public class Main {
         }
         else if(true)
         {
-            System.out.print("this is the good one");
+            System.out.println("this is the good one");
         }
         else
         {
@@ -48,15 +48,15 @@ public class Main {
             System.out.println("you are cool");
         }
         // Make an if statement using 2 variables and an AND(&&) statement that triggers a print or println statement
-        boolean cool = true;
-        boolean uncool = false;
+        //boolean cool = true;
+        //boolean uncool = false;
         if(cool && !uncool)
         {
             System.out.println("you are very cool");
         }
         // Make an if statement using 2 variables and an OR(||) statement that triggers a print or println statement
-        boolean cool = true;
-        boolean uncool = false;
+        //boolean cool = true;
+        //boolean uncool = false;
         if(cool || uncool)
         {
             System.out.println("you might be cool");
