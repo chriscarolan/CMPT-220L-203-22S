@@ -53,18 +53,21 @@ public class Main {
     }
 
     // For the following todos you'll probably want to define them below and then call them from the main function above.
-        static void power() {
-        /**
-         * I want you to write a function that will take in a number and raise it to the power given.
-         * For example if given the numbers 2 and 3. The math that the function should do is 2^3
-         * and should print out or return 8. Print the output.
-         */
+        static double power() {
+            /**
+             * I want you to write a function that will take in a number and raise it to the power given.
+             * For example if given the numbers 2 and 3. The math that the function should do is 2^3
+             * and should print out or return 8. Print the output.
+             */
+
             double a = 2;
             double b = 3;
 
             double pow = Math.pow(a, b);
             System.out.println("power: " + Math.pow(a, b));
-        }
+            return Math.pow(a,b);
+            }
+
 
         /**
          * I want you to write a function that will take in a list and see how many times a given number is in the list.
@@ -135,4 +138,5 @@ public class Main {
             return answer;
         }
     }
+
 
