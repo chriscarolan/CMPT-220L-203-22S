@@ -2,6 +2,7 @@ package base;
 import java.lang.Math;
 import java.util.*;
 import java.util.stream.*;
+import java.io.*;
 
 public class Main {
     /**
@@ -24,12 +25,16 @@ public class Main {
         switch (sport) {
             case "Basketball":
                 System.out.println("Basketball is very fun to play and watch, great sport!");
+                break;
             case "Baseball":
                 System.out.println("Baseball is very difficult to play but fun to watch!");
+                break;
             case "Football":
                 System.out.println("Football is great, very fun to watch!");
+                break;
             default:
                 System.out.println("Not an generic sports fan I guess?");
+                break;
         }
         // Give me an example of you using a for loop
         for (int i = 0; i < 3; i++) {
@@ -43,7 +48,7 @@ public class Main {
         }
         power();
         list();
-
+        summation();
         pythagorean();
     }
 
@@ -57,7 +62,8 @@ public class Main {
             double a = 2;
             double b = 3;
 
-            System.out.println(Math.pow(a, b));
+            double pow = Math.pow(a, b);
+            System.out.println("power: " + Math.pow(a, b));
         }
 
         /**
@@ -66,21 +72,16 @@ public class Main {
          * or return 3. Print the output.
          */
         static void list() {
-            //char numbers[] = {2, 3, 5, 2, 3, 6, 7, 8, 2};
-            //long count = numbers.stream().filter(number -> "2".equals(numbers)).count();
-            //int characterFinder(char targetCharacter, String string) {
-                //int total = 0;
-                //for (char character: string.toCharArray()){
-                    //if (character == targetCharacter) {
-                        //total++;
-                    //}
-                //}
-                //return total;
-            //}
-
-            //int output = characterFinder('2', numbers);
-            //System.out.println(output);
+            int[] numbers = {2, 3, 5, 2, 3, 6, 7, 8, 2};
+            int count = 0;
+            for (int num: numbers){
+                if (num == 2){
+                    count++;
+                }
+            }
+            System.out.println(count);
         }
+
 
 
         /**
@@ -89,7 +90,16 @@ public class Main {
          * Once that’s done print or return the answer. Print the output
          */
         static void summation() {
-            int fun[] = {2, 4, 6, 8};
+            List<Integer> fun = new ArrayList<>();
+            fun.add(2);
+            fun.add(4);
+            fun.add(6);
+            fun.add(8);
+            int summation = 0;
+            for (int i = 0; i < fun.size(); i++) {
+                summation += fun.get(i);
+            }
+            System.out.println("summation: " + summation);
 
         }
 
@@ -111,7 +121,7 @@ public class Main {
             double powerA = (Math.pow(a, 2));
             double powerB = Math.pow(b,2);
             double c = powerA + powerB;
-            System.out.println(Math.sqrt(c));
+            System.out.println("pythagorean: " + Math.sqrt(c));
 
         }
 
