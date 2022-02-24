@@ -36,12 +36,12 @@ public class Main {
 
     static void dry_inventory() {
         // Your DRY Solution goes here!
-        Scanner scan = new Scanner(System.in);  // Create a Scanner object
+        Scanner scan = new Scanner(System.in);
 
         for(int i = 0; i < 15; i++){
             System.out.print("How many pretzels do you want?: ");
             int pretzel = scan.nextInt();
-            System.out.print("How much lemonnade do you want?: ");
+            System.out.print("How much lemonade do you want?: ");
             int lemonade = scan.nextInt();
             System.out.print("How much of a tip would you like to give?: ");
             double tip = scan.nextDouble();
