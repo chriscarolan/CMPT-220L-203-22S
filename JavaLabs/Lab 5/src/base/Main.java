@@ -1,4 +1,5 @@
 package base;
+import java.util.Scanner;
 
 public class Main {
     /**
@@ -29,11 +30,34 @@ public class Main {
 
     public static void main(String[] args) {
         //	Replace this with your dry inventory function!
-        wet_inventory();
+        //wet_inventory();
+        dry_inventory();
     }
 
     static void dry_inventory() {
         // Your DRY Solution goes here!
+        Scanner scan = new Scanner(System.in);  // Create a Scanner object
+
+        for(int i = 0; i < 15; i++){
+            System.out.print("How many pretzels do you want?: ");
+            int pretzel = scan.nextInt();
+            System.out.print("How much lemonnade do you want?: ");
+            int lemonade = scan.nextInt();
+            System.out.print("How much of a tip would you like to give?: ");
+            double tip = scan.nextDouble();
+            pretzels_available -= pretzel;
+            cash += pretzel*2;
+            lemonades_available -= lemonade;
+            cash += 8*lemonade;
+            tips += tip;
+        }
+
+        System.out.println("Results for the hour!");
+        System.out.println("Lemonades Inventory: " + lemonades_available);
+        System.out.println("Pretzels Inventory: " + pretzels_available);
+        System.out.println("Cash: " + cash);
+        System.out.println("Tips: " + tips);
+        
     }
 
     static void wet_inventory() {
