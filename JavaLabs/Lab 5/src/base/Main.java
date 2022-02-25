@@ -37,6 +37,7 @@ public class Main {
     static void dry_inventory() {
         // Your DRY Solution goes here!
         Scanner scan = new Scanner(System.in);
+        // create user input called scan that can help to gather how much of each user does
 
         for(int i = 0; i < 15; i++){
             System.out.print("How many pretzels do you want?: ");
