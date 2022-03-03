@@ -16,9 +16,9 @@ public class Main {
      * Our Goals are:
      * - Creating an Array
      * - Creating an ArrayList
-     * - Creating an LinkedList
-     * - Creating an Queue
-     * - Creating an Stack
+     * - Creating a LinkedList
+     * - Creating a Queue
+     * - Creating a Stack
      * - Create a Plant
      *
      * Please show the ability to:
@@ -65,8 +65,9 @@ public class Main {
         while(!intStack.empty()){
             System.out.println(intStack.pop());
         }
-        // Using the information in the Lab 6 J
-        // upyter Notebook create an instance of plant here.
+        System.out.println();
+        // Using the information in the Lab 6 Jupyter Notebook create an instance of plant here.
         Plants plant = new Plants(true, "sunflower", "rose");
+        System.out.println(plant.name);
     }
 }

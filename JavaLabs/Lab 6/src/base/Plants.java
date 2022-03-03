@@ -13,7 +13,7 @@ public class Plants {
         this.name = name;
     }
     public void wateringInstruction(){
-
+        System.out.println("give water");
     }
     public void sunlightRequirements(){
 
