@@ -1,0 +1,25 @@
+
+l
+java:S1128"QRemove this unnecessary import: java.lang classes are always implicitly imported.(Š‘…ûıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÉæùÛùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(××Æ¹ÿÿÿÿÿ
+M	java:S106!"9Replace this use of System.out or System.err by a logger.(áƒ¦
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(’ÈË‡ıÿÿÿÿ
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(Â¾ğó
+N	java:S106."9Replace this use of System.out or System.err by a logger.(¾á§Œ
+M
+java:S1854B"7Remove this useless assignment to local variable "pow".(õâ¹ò
+>
+java:S1481B"(Remove this unused "pow" local variable.(õâ¹ò
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(™Ø§
+S	java:S106U"9Replace this use of System.out or System.err by a logger.(³ğ¸ûÿÿÿÿ
+M	java:S106i"9Replace this use of System.out or System.err by a logger.(åœ‡.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÚŒ¹üÿÿÿÿ
+H
+java:S1128"-Remove this unused import 'java.util.stream'.(§æĞçøÿÿÿÿ
+9
+java:S1128"$Remove this unused import 'java.io'.(¬›ãD
+z
+java:S1488„"^Immediately return this expression instead of assigning it to the temporary variable "answer".(Ú·‘øÿÿÿÿ
+z
+java:S1488‰"^Immediately return this expression instead of assigning it to the temporary variable "answer".(İí ªùÿÿÿÿ
