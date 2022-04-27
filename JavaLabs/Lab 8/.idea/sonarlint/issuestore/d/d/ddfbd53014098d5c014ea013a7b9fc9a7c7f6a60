@@ -1,0 +1,7 @@
+
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(Ö¬ê±
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(Ö¬ê±
+n
+java:S1104"XMake nextListItem a static final constant or non-public and provide accessors if needed.(°ãº
+l
+java:S1104"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ
