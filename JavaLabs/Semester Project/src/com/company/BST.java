@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BST {
     class Node {
@@ -90,5 +92,117 @@ public class BST {
         ArrayList<Node> nums = inorder(root, new ArrayList<Node>());
         return nums.get(nums.size() - k);
     }
+    public Node deleteElement(Node root, int key){
+        if (root == null){
+            return root;
+        }
+        if (key < root.key){
+            root.left = deleteElement(root.left, key);
+        }
+        else if (key > root.key){
+            root.right = deleteElement(root.right, key);
+        }
+        else {
+            if (root.left == null){
+                return root.right;
+            }
+            else if (root.right == null){
+                return root.left;
+            }
+            root.key = reorganize(root.right);
+
+            root.right = deleteElement(root.right, root.key);
+        }
+
+        return root;
+    }
+    // Gets the smallest value in the right subtree to reorder the tree.
+    public int reorganize(Node root){
+        int minv = root.key;
+        while (root.left != null)
+        {
+            minv = root.left.key;
+            root = root.left;
+        }
+        return minv;
+    }
+    public void postorder(Node node)
+    {
+        if (node == null) {
+            return;
+        }
+
+        postorder(node.left);
+
+        postorder(node.right);
+
+        System.out.print(node.key + " ");
+    }
+
+    public void inorder(Node node)
+    {
+        if (node == null) {
+            return;
+        }
+
+        inorder(node.left);
+
+        System.out.print(node.key + " ");
+
+        inorder(node.right);
+    }
+    public void preorder(Node node)
+    {
+        if (node == null) {
+            return;
+        }
+
+        System.out.print(node.key + " ");
+
+        preorder(node.left);
+
+        preorder(node.right);
+    }
+    public Node postorderDFS(Node node, int key)
+    {
+
+        if(node.key == key){
+            return node;
+        }
+
+        Node ans = null;
+
+        if(node.left != null){
+            ans = postorderDFS(node.left, key);
+        }
+
+        if(node.right != null){
+            ans = postorderDFS(node.right, key);
+        }
+
+        return ans;
+
+    }
+    static Node searchBFS(Node root, int key) {
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+        Node ans = null;
+        while (!queue.isEmpty()) {
+            Node temp = queue.poll();
+
+            if (temp.key == key){
+                ans = temp;
+                break;
+            }
+            if (temp.left != null) {
+                queue.add(temp.left);
+            }
+            if (temp.right != null) {
+                queue.add(temp.right);
+            }
+        }
+        return ans;
+    }
+
 
 }
